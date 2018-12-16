@@ -1,18 +1,10 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Dec  9 21:22:30 2018
-
-@author: brieu
-"""
+import sys
 
 ### VENTE AUX ENCHERES ###
-
-import sys
 
 lines = []
 for line in sys.stdin:
 	lines.append(line.rstrip('\n'))
-print(lines)
 
 N = int(lines[0]) # nombre d'enchères recues
 P = int(lines[1]) # prix de reserve
@@ -27,6 +19,8 @@ for element in encheres:
     if prix > prix_gagnant:
         prix_gagnant = prix
         gagnant = user
+
+print(prix_gagnant)
 
 ### MOT MAGIQUE ###
 
@@ -49,6 +43,7 @@ for _, word in enumerate(list_magic):
         if ord(char2) - ord(char1) == 1:
             if ord(char_end) in voyelle:
                 resultat.append(word)
+
 print(len(set(resultat)))
 
 ### FONCTION MYSTERIEUSE ###
